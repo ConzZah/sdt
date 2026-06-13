@@ -26,7 +26,7 @@ touch "$HOME/.profile"
 printf '%s\n' "$deb_alias" >> "$HOME/.profile"
 
 ## install basic packages
-proot-distro login debian -- apt install -yy build-essential git fastfetch
+proot-distro login debian -- apt update && apt install -yy build-essential git fastfetch
 
 ## login
 proot-distro login debian
